@@ -1,0 +1,119 @@
+---
+title: "About"
+subtitle: "Building models that know the limits of what they know, and pointing them at drug-resistant infection"
+description: "Godswill Imolele Anthony is a computational biologist developing Bayesian and uncertainty-aware AI for antimicrobial resistance surveillance and drug discovery. Applying to PhD programmes in computational biology."
+page-layout: article
+toc: false
+---
+
+Every antibiotic ever made is an argument with evolution, and evolution has had four billion years of practice. Resistance is what it looks like when that argument is being lost: slowly, quietly, one hospital ward at a time.
+
+The data that should tell us where we are losing are patchy, unevenly collected, and often thinnest in the places where infection hits hardest. A model trained on such data can sound certain and be wrong. So I build the other kind: models that say not only **what** they predict, but **how far**, **when**, and **for whom** that prediction can be trusted.
+
+I am **Godswill Imolele Anthony**, a computational biologist working on explainable, uncertainty-aware AI for antimicrobial resistance (AMR) and antimicrobial discovery. I am seeking a PhD where this work can grow into a rigorous, independent research programme.
+
+::: {.columns}
+
+::: {.column width="25%"}
+### 4.95 million
+isolate–drug observations synthesised in a Bayesian hierarchical model
+:::
+
+::: {.column width="25%"}
+### 71 countries
+44 species, ten antibiotics, 2004–2024
+:::
+
+::: {.column width="25%"}
+### 2 global challenges
+Finalist (top 10% of 100+ teams), then Cross-Domain Award, Vivli AMR Surveillance
+:::
+
+::: {.column width="25%"}
+### 3 live systems
+Deployed dashboards you can open and test right now
+:::
+
+:::
+
+*[Publications](publications.qmd) · [ORCID 0000-0002-3093-3309](https://orcid.org/0000-0002-3093-3309) · [anthonyimolele@gmail.com](mailto:anthonyimolele@gmail.com)*
+
+---
+
+## Try the work, not just read about it
+
+Three systems I built are live. Each one makes its uncertainty visible.
+
+| System | What it does | Live | Code |
+|---|---|---|---|
+| **Argus AI** | Bayesian hierarchical synthesis of 4.95M isolate–drug observations with global AMR R&D investment data, to expose the gap between threat and innovation | [Open dashboard](https://argus-framework.streamlit.app/) | [GITHUB-LINK] |
+| **ResistAI+** | Bayesian change-point modelling, MIC-creep analysis and posterior-predictive forecasting across multi-country data | [Open dashboard](https://resistaiplus.streamlit.app/) | [GITHUB-LINK] |
+| **NaijaResist** | Genotype–phenotype reconciliation for Nigeria, making discordance visible and reviewable | [Open dashboard](https://naijaresist.streamlit.app/) | [GITHUB-LINK] |
+
+---
+
+## Three questions that drive my work
+
+**1. Which signals are real?**
+Surveillance data are heterogeneous: different laboratories, methods, breakpoints and years. Partial pooling lets sparse settings borrow strength from richer ones without pretending they are the same. In [Argus AI](https://argus-framework.streamlit.app/), I checked the conclusions with isolate-weighted and country-balanced sensitivity analyses, so the results do not depend on one modelling choice.
+
+**2. Where do predictions stop being trustworthy?**
+Biomarkers and models often lose validity when they cross ancestries, health systems or pathogen lineages. I treat that failure as information about hidden biological structure rather than as noise to be averaged away.
+
+**3. Can a model show its disagreement?**
+Phenotype says *resistant*; the genome says *susceptible*. Most pipelines quietly pick one. In [NaijaResist](https://naijaresist.streamlit.app/), I keep both sources, flag the discordance, and make it reviewable, because that disagreement is often where the biology is.
+
+---
+
+## How I got here
+
+I began at the bench. As a research assistant at the Nigerian Institute of Medical Research, I ran more than 200 ELISA and TIA assays and 20+ Western blots, and managed mouse colonies under Good Laboratory Practice. That taught me something many modellers never learn: **how data are made**, and how many small decisions sit between a living system and a number in a spreadsheet.
+
+At the Helix Biogen Institute, I moved into bioinformatics and statistical modelling. I integrated transcriptomic, immune, whole-genome and clinical data into survival models, finding that low HLA class I expression predicts poorer outcomes, and I led a four-month metagenomics project with nine junior researchers.
+
+From there, the thread tightened around one question: how do we make computational biology honest enough to guide decisions about infection? That led to AMR surveillance, to Bayesian forecasting, and to machine-learning discovery of new inhibitors, including a first-author study of natural-product inhibitors of **InhA**, a tuberculosis target, published in *Biology Methods and Protocols* (2026). I also work as a bioinformatics associate on infection genomics and metagenomics projects, including a proposal to integrate *E. coli* genomic surveillance into the African Genomes Archive for Response and Insights (AGARI).
+
+---
+
+## Why Africa is a scientific argument, not only an equity one
+
+African populations and pathogens hold some of the greatest genetic diversity on Earth, yet they are underrepresented in the datasets that shape biomedical knowledge. That is an issue of fairness. It is also a *discovery* problem. Models built on narrow populations carry assumptions they cannot see, and the cases where those models fail teach us what is actually universal and what only seemed to be.
+
+Where data are sparse, quantifying uncertainty is not a luxury; it is the only responsible way to reason. That is why I build from Nigeria, and why I think this setting can produce methods the rest of the world will need.
+
+---
+
+## What I am looking for in a PhD
+
+I want to train in a group that takes both rigorous statistics and real biological data seriously. Specifically, I hope to:
+
+- Develop **calibrated, transportable models** for resistance and drug discovery that hold up across populations and pathogen lineages
+- Strengthen my foundations in **Bayesian inference, causal reasoning and probabilistic machine learning**
+- Work with **pathogen genomics and experimental collaborators** so that predictions are tested against biology, not only benchmarks
+- Build open, reproducible tools that **other researchers, including those in low-resource settings, can reuse**
+
+I bring a record of delivering end to end: from messy multi-country data, through models with quantified uncertainty, to systems people can actually use. I am looking for the mentorship to take that to the next level.
+
+---
+
+## What I work on
+
+- **Bayesian and probabilistic modelling:** hierarchical models, change-point analysis, posterior-predictive forecasting, sensitivity analysis
+- **AI for molecular discovery:** QSAR, message-passing neural networks, docking and molecular dynamics, scaffold-aware evaluation
+- **Genomic data integration:** genotype–phenotype reconciliation, metadata harmonisation, provenance and reproducible pipelines
+- **Translational omics:** RNA-seq and multi-omics survival modelling with Cox proportional-hazards
+
+---
+
+## Beyond the lab
+
+I lead research-skills workshops for around 81 members of the African Community for Systematic Review and Meta-Analysis, and I mentor early-career researchers in reproducible bioinformatics. If a method only works when its author is in the room, it is not yet science. I try to leave behind workflows, documentation and people who can carry them forward.
+
+---
+
+## Where this is going
+
+My long-term aim is to lead a research programme that makes precision medicine and AMR response **more trustworthy, more generalisable, and more representative of humanity**: systems that expose their uncertainty, survive changes of population and context, illuminate mechanism, and help turn molecular evidence into responsible action.
+
+· [Publications](publications.qmd) · [Research](research.qmd)
+:::

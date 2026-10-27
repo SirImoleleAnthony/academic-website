@@ -1,0 +1,104 @@
+---
+title: "Experience"
+subtitle: "From the bench to the posterior: how I learned where data come from, and what to do when they are uncertain"
+description: "Research experience of Godswill Imolele Anthony: bioinformatics, cancer genomics, infection genomics and Bayesian AMR modelling, from laboratory immunoassays to multi-country surveillance synthesis."
+page-layout: article
+---
+
+A scientist who models data should understand how data are made. My path runs from ELISA plates and mouse colonies, through survival models and metagenomics, to Bayesian synthesis of millions of resistance observations. Each stage changed how I think about evidence, and each one is still in how I work.
+
+| Period | Role | Focus |
+|---|---|---|
+| Oct 2026 – present | Bioinformatics Associate (Level 3), BioSeq LTD (remote) | Infection genomics, metagenomics, AMR data integration |
+| Feb 2020 – present | Project Lead, Research & Teaching Assistant, Helix Biogen Institute | Multi-omics, cancer genomics, metagenomics, diagnostics, Bayesian AMR modelling, mentorship |
+| Feb 2018 – Jul 2019 | Laboratory Research Assistant, Nigerian Institute of Medical Research | Immunoassays, preclinical work under GLP |
+
+---
+
+## Bioinformatics Associate (Level 3)
+
+**BioSeq LTD** · Remote, project-based · *4 October 2026 – present*
+
+I support infection genomics, metagenomics and multi-omics projects, with a focus on turning heterogeneous data into evidence that others can audit.
+
+- **AGARI *E. coli* data integration (Africa CDC / ASLM):** scientific contributor to BioSeq's proposal to bring *E. coli* genomic surveillance into the African Genomes Archive for Response and Insights (AGARI).
+- **Resolution-aware AMR results:** defined resistance calls at the highest justified resolution (family, allele, mutation, mechanism), each with call-resolution state and tool, database and version provenance, and proposed a PHA4GE hAMRonization mapping across AMR-detection tools.
+- **Discordance made visible:** proposed genotype–phenotype discordance flags that retain both sources, method–drug–breakpoint compatibility checks, event-level lineage and synthetic acceptance cases.
+
+::: {.callout-tip appearance="simple"}
+## What this is teaching me
+Surveillance fails quietly when data are merged without provenance. Making every call traceable is as important as the model on top of it.
+:::
+
+---
+
+## Project Lead, Research & Teaching Assistant
+
+**Helix Biogen Institute, Nigeria** · *February 2020 – present*
+
+Here I moved from running experiments to designing analyses and leading people. The work spans cancer genomics, metagenomics, diagnostics and, most recently, Bayesian AMR surveillance.
+
+### Bayesian AMR surveillance: ResistAI+
+
+- **Led the development of [ResistAI+](https://resistaiplus.streamlit.app/)**, an uncertainty-aware AMR surveillance platform built on Pfizer ATLAS data (2004–2023).
+- **Modelled temporal and geographic variation** in antimicrobial non-susceptibility with Bayesian hierarchical models, and developed change-point and MIC-creep analyses for levofloxacin, meropenem and linezolid.
+- **Added forecasting and decision support:** posterior-predictive and time-to-threshold forecasting, delivered as an interactive, evidence-aware dashboard.
+- **Outcome:** finalist, top 10% of 100+ international teams, 2025 Vivli AMR Surveillance Global Data Challenge.
+
+### Computational oncology and multi-omics
+
+- **Built survival models** integrating transcriptomic, whole-genome, HLA class I immune and clinical variables.
+- **Finding:** with Cox proportional-hazards modelling, reduced HLA-I expression predicted poorer survival, linking immune-surveillance biology to clinical outcome.
+- **Analysed RNA-seq and microarray data** from a Sri Lankan nasopharyngeal carcinoma cohort using **DESeq2, limma and gene-set enrichment**, identifying tumour-associated transcriptional signatures and immune-pathway dysregulation.
+
+### Cancer metagenomics
+
+- **Led a four-month project** with nine undergraduate students on microbial signatures associated with pancreatic cancer, using sequencing-based microbial profiling and comparative bioinformatics.
+- **Coordinated the full arc:** design, analytical workflow, interpretation and research training, from question to manuscript.
+- **Produced two manuscripts** on the role of microbial genes in pancreatic cancer promotion and progression, identifying key genes and exploring their potential as therapeutic targets or biomarkers.
+
+### Translational diagnostics: Ebola Zaire
+
+- **Identified a gap** in Ebola Zaire strain diagnosis and led a collaborative project to select and analyse immunogenic genes and epitopes using computational immunology.
+- **Evaluated candidates** for antigen specificity, immunogenic potential and suitability for diagnostics, and designed a **potential construct for a lateral-flow test kit**.
+
+### Teaching and mentorship
+
+- Supervise undergraduate students across bioinformatics, genomics and computational biology, from forming a research question to preparing a manuscript.
+- Teach applied Python, R, machine learning, sequence analysis, structural bioinformatics and reproducible research.
+
+::: {.callout-tip appearance="simple"}
+## What this taught me
+That a result is not finished until someone else can reproduce it, and that the best test of understanding a method is teaching it to someone who has never seen it.
+:::
+
+---
+
+## Further AMR systems
+
+Alongside ResistAI+, I lead and architect two further systems that extend the same idea: make uncertainty and disagreement visible. [See full project pages](projects.qmd).
+
+- **[Argus AI](https://argus-framework.streamlit.app/)** (project lead): Bayesian synthesis of **4.95 million isolate–drug observations** across 71 countries, 44 species and ten antibiotics (2004–2024), linked with global AMR R&D investment data. **Global AMR R&D Hub Cross-Domain Award, 2026 Vivli AMR Surveillance Data Challenge.**
+- **[NaijaResist](https://naijaresist.streamlit.app/)** (architect): prototype AMR intelligence system for Nigeria that reconciles phenotype and genotype so that discordance is visible and reviewable.
+
+---
+
+## Laboratory Research Assistant
+
+**Department of Biochemistry, Nigerian Institute of Medical Research (NIMR)** · *February 2018 – July 2019*
+
+This was my foundation. Before I wrote a single model, I spent a year generating the numbers models depend on.
+
+- Performed **200+ ELISA and turbidimetric immunoassays** and **20+ Western blots**, including sample preparation, assay optimisation and quality control.
+- Managed **GLP-controlled mouse colonies** for preclinical studies, keeping documented records and supporting welfare and regulatory compliance.
+- Carried out nucleic-acid extraction, PCR, gel electrophoresis, spectrometry and chromatography-related procedures.
+- Standardised experimental procedures to improve consistency and reproducibility across assays.
+
+::: {.callout-tip appearance="simple"}
+## What this taught me
+Every data point has a hand, an instrument and a day behind it. That understanding shapes how I treat measurement error, batch effects and missing data now.
+:::
+
+---
+
+*Looking for the evidence behind this page? [Publications](publications.qmd) · [Projects](projects.qmd) · [About](about.qmd)*

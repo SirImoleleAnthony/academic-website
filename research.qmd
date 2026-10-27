@@ -1,0 +1,114 @@
+---
+title: "Research"
+subtitle: "Trustworthy inference when data are uneven, incomplete and in disagreement"
+description: "Research programme of Godswill Imolele Anthony: Bayesian and uncertainty-aware AI for antimicrobial resistance surveillance, genotype–phenotype reconciliation and machine-learning drug discovery."
+page-layout: article
+---
+
+Biomedicine can now generate molecular data at extraordinary scale. What remains hard is knowing **which signals are real, which conclusions will generalise, and which predictions are trustworthy enough to act on.**
+
+My research tackles that problem where the stakes are highest and the data are thinnest: antimicrobial resistance (AMR). I build models that report not only what they predict, but **when, why and for whom** that prediction should be trusted, and I treat their failures as information about hidden biology rather than as noise.
+
+```{mermaid}
+flowchart LR
+    A["Heterogeneous data<br/>(labs, methods, countries, years)"] --> B["Hierarchical model<br/>with quantified uncertainty"]
+    B --> C["Disagreement flagged<br/>(genotype vs phenotype,<br/>model vs sensitivity analysis)"]
+    C --> D["Decision-grade evidence<br/>for researchers and policy"]
+```
+
+---
+
+# Four research threads
+
+## 1. Evidence synthesis under heterogeneity
+
+**The question:** how do we combine surveillance data that differ in laboratory, method, breakpoint and year, without pretending they are the same or throwing away what sparse settings can teach us?
+
+**What I have done:**
+
+- **[Argus AI](https://argus-framework.streamlit.app/):** a Bayesian hierarchical synthesis of **4.95 million isolate–drug observations** (71 countries, 44 species, ten antibiotics, 2004–2024), linked to global AMR R&D investment, with partial pooling and isolate-weighted and country-balanced sensitivity analyses. *Global AMR R&D Hub Cross-Domain Award, 2026 Vivli AMR Surveillance Data Challenge.*
+- **[ResistAI+](https://resistaiplus.streamlit.app/):** Bayesian change-point modelling, MIC-creep analysis and posterior-predictive forecasting across multi-country data. *Finalist, top 10% of 100+ teams, 2025 Vivli AMR Surveillance Global Data Challenge.*
+
+<!-- OPTIONAL FIGURE: add the corrected funding-gap figure here once fixed
+![Funding gap versus evidence strength across pathogen-year records. [CAPTION]](images/funding_gap_vs_evidence_strength.png){fig-alt="Scatter plot of funding gap against evidence strength by pathogen-year"}
+-->
+
+## 2. Disagreement as a signal
+
+**The question:** when phenotype says *resistant* and the genome says *susceptible*, is that an error, a new mechanism, or a limit of the method? Most pipelines quietly choose one source. I think the disagreement itself should be modelled.
+
+**What I have done:**
+
+- **[NaijaResist](https://naijaresist.streamlit.app/):** a prototype that reconciles phenotypic resistance, gene burden, cross-species transfer and organism-level threat, flagging discordance so it is visible and reviewable, alongside machine-learning resistance prediction and trend analysis for Nigeria.
+- **AGARI *E. coli* data integration (BioSeq, Africa CDC / ASLM):** contributed to a proposal that defines AMR results at the highest justified resolution (family, allele, mutation, mechanism) with call-resolution state and tool, database and version provenance, a PHA4GE hAMRonization mapping, and genotype–phenotype discordance flags that retain both sources.
+
+## 3. Trustworthy computational discovery
+
+**The question:** a ranked list of candidate molecules is only useful if we know how far to trust the ranking. How do we build discovery pipelines whose reliability can be examined at each step, so that a high computational score cannot rescue an implausible molecule?
+
+**What I have done:**
+
+### Morph-HSV: resistance-aware antiviral prioritisation (team lead)
+
+*2026 Shanghai Computational Biology competition, preliminary round · Team of four · [Code]([GITHUB-LINK])*
+
+The task was to rank 100 non-nucleoside candidates against **HSV-1 DNA polymerase** for experimental testing, while accounting for resistance-associated variants and chemical feasibility. I led a team that treated this as a multi-stage prioritisation problem instead of a single-score virtual screen.
+
+```{mermaid}
+flowchart LR
+    A["~22,000 compounds<br/>literature, docking evidence,<br/>ChEMBL and similarity mining"] --> B["1,004 molecules<br/>541 scaffolds<br/>scaffold-aware QSAR"]
+    B --> C["~5 million molecules screened<br/>Top 1,000"]
+    C --> D["374 after property<br/>and feasibility filters"]
+    D --> E["Glide HTVS/XP re-docking<br/>against 8VQ2"]
+    E --> F["Ranked Top 100<br/>with resistance-variant checks"]
+```
+
+- **Scaffold-aware evaluation.** Models (Random Forest, XGBoost, LightGBM, Ridge) were validated on non-overlapping scaffold groups, so that performance reflects prediction on *new chemistry* rather than near-copies of training molecules. The production model reached a mean R² of 0.55 ± 0.07 (RMSE 0.74, MAE 0.59) across ten randomised scaffold splits. I report this deliberately conservative figure because it is the honest one.
+- **Explicit gates, not one score.** The final ranking combines QSAR prediction, XP docking, synthetic accessibility, drug-likeness, physicochemical and structural-alert criteria, and scaffold-diversity control, with matched re-docking against wild-type and the W781V, N815S and Y941H resistance variants where available.
+- **Auditability.** Large-library screening preserved identifiers and failed-structure logs, and top candidates received manual pose review.
+- **Status:** [PRELIMINARY ROUND SUBMITTED. ADD OUTCOME ONLY WHEN ANNOUNCED AND ACCURATE.] These are computational predictions; none has yet been experimentally tested.
+
+### Earlier discovery work
+
+- **First-author study of natural-product inhibitors of InhA**, a tuberculosis target, combining molecular descriptors, model evaluation, docking and molecular dynamics ([*Biology Methods and Protocols*, 2026](https://doi.org/10.1093/biomethods/bpag015)).
+- **First-author study of 4-quinolone ligands for GRK5** using message-passing neural networks, docking and molecular dynamics ([*Egyptian Journal of Medical Human Genetics*, 2025](https://doi.org/10.1186/s43042-025-00780-x)).
+- **Winner, 2025 Advanced CADD Machine-Learning Drug Discovery Challenge**, with leading enrichment factor and error performance in an international West African cohort.
+
+## 4. From molecular signal to clinical outcome
+
+**The question:** why do patients with seemingly similar molecular profiles have very different outcomes?
+
+**What I have done:** built multi-omics survival models integrating transcriptomic, whole-genome, immune and clinical data, and found with Cox proportional-hazards modelling that **low HLA class I expression predicts poorer outcomes**. I also analysed RNA-seq and microarray cohorts (DESeq2, limma, GSEA) from a Sri Lankan nasopharyngeal carcinoma study. This thread taught me to ask what a model is missing, not only what it captures.
+
+---
+
+# Questions I want to pursue in a PhD
+
+These are directions, not completed work. Each follows from something the systems above could not yet answer.
+
+**1. When does a resistance model transport?**
+Models trained on one region, ancestry or pathogen lineage often fail on another. I want to understand *why*, treating calibration and transportability as properties to be measured and designed for, not as secondary performance metrics.
+
+**2. Can genotype–phenotype discordance be modelled, not merely flagged?**
+Flagging is a first step. A probabilistic account that separates technical error, method-specific artefact and genuine biology (a new mechanism, regulatory change or heteroresistance) would make discordance scientifically productive.
+
+**3. Can uncertainty decide which molecules get tested first?**
+Morph-HSV ranks candidates with filters and consensus scoring, but its ranking does not yet carry calibrated uncertainty. Models with explicit applicability domains could direct limited experimental effort to compounds whose predictions are both promising and well supported, closing the loop between computation and the bench.
+
+**4. What does sparse data teach us about the limits of universal biology?**
+African populations and pathogens hold some of the greatest genetic diversity on Earth, yet are underrepresented in the datasets that define biomedical knowledge. Where methods break on such data, they reveal assumptions that were mistaken for universal truths.
+
+---
+
+# The kind of lab where this fits
+
+I work best where **rigorous statistics meets real biological data**, in groups that combine Bayesian or probabilistic machine learning with pathogen genomics, antimicrobial discovery or global-health epidemiology, and where predictions are tested against experiment, not only benchmarks.
+
+My long-term aim is to lead a research programme that makes precision medicine and AMR response **more trustworthy, more generalisable and more representative of humanity**.
+
+::: {.callout-note appearance="simple"}
+## Collaboration
+I welcome conversations about AMR surveillance, pathogen genomics, Bayesian methods and drug discovery.
+
+[Email me](mailto:anthonyimolele@gmail.com) · [Projects](projects.qmd) · [Publications](publications.qmd) · [Experience](experience.qmd) · [About](about.qmd)
+:::

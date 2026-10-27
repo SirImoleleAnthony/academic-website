@@ -1,0 +1,78 @@
+/* Typography */
+
+body {
+  font-family: "Inter", "Segoe UI", sans-serif;
+  line-height: 1.8;
+  font-size: 18px;
+  color: #2c2c2c;
+
+}
+
+.hero-text {
+    padding-left: 2rem;
+}
+
+/* Headings */
+
+h1 {
+  font-weight: 700;
+  margin-top: 2rem;
+}
+
+h2 {
+  margin-top: 2rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-weight: 600;
+}
+
+/* Navigation */
+
+.navbar {
+  font-weight: 500;
+}
+
+/* Buttons */
+
+.btn {
+  border-radius: 999px;
+  padding: 0.6rem 1.2rem;
+}
+
+/* Images */
+
+img {
+  border-radius: 12px;
+}
+
+/* Blockquotes */
+
+blockquote {
+  font-style: italic;
+  border-left: 4px solid #0d6efd;
+  padding-left: 1rem;
+  color: #555;
+}
+
+/* Page width */
+
+main.content {
+  max-width: 1100px;
+}
+
+a{
+
+    text-decoration:none;
+
+}
+
+a:hover{
+
+    text-decoration:underline;
+
+}
+
+/* css styles */
+

@@ -1,0 +1,79 @@
+---
+title: ""
+toc: false
+---
+
+# Let's Advance Biomedical Discovery Together
+
+Scientific progress is driven by collaboration across disciplines, institutions, and perspectives.
+
+I welcome conversations with researchers, principal investigators, students, clinicians, and industry scientists who share an interest in computational biology, artificial intelligence, and data-driven biomedical discovery.
+
+Whether the discussion involves collaborative research, graduate opportunities, computational methods, or open science, I am always interested in exchanging ideas that have the potential to advance meaningful scientific work.
+
+---
+
+## Research Interests
+
+I am particularly interested in collaborations involving:
+
+- Computational Biology
+- Bioinformatics
+- Computational Genomics
+- Artificial Intelligence for Biomedicine
+- Machine Learning
+- Structural Bioinformatics
+- Computational Drug Discovery
+- Precision Medicine
+- Cancer Biology
+- Infectious Diseases
+- Multi-omics Integration
+- Open Science
+
+---
+
+## Professional Profiles
+
+**Email**
+
+anthonyimolele@gmail.com
+
+[ORCID]( https://orcid.org/0000-0002-3093-3309)
+
+[GitHub]( https://github.com/SirImoleleAnthony?tab=repositories)
+
+[LinkedIn]( https://www.linkedin.com/in/godswill-anthony-850639199?utm_source=share_via&utm_content=profile&utm_medium=member_android)
+
+[ResearchGate]( https://www.researchgate.net/profile/Godswill-Anthony)
+
+---
+
+## Current Interests
+
+I am currently seeking opportunities to contribute to ambitious research environments where computational approaches can generate new biological insight and accelerate biomedical discovery.
+
+I am particularly interested in collaborations involving:
+
+- Computational genomics
+- AI-enabled biomedical research
+- Therapeutic discovery
+- Precision medicine
+- Translational computational biology
+
+---
+
+## A Philosophy of Collaboration
+
+I believe that the most impactful scientific advances emerge when complementary expertise converges around important questions.
+
+I value collaborations characterized by intellectual curiosity, methodological rigor, openness, and a shared commitment to reproducible and impactful research.
+
+---
+
+## Get in Touch
+
+If my research interests align with yours, I would be delighted to connect.
+
+Whether you would like to discuss research ideas, potential collaborations, graduate opportunities, invited talks, open-source initiatives, or interdisciplinary projects, please feel free to reach out.
+
+I look forward to contributing to scientific discoveries that improve our understanding of biology and ultimately benefit human health.

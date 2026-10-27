@@ -1,0 +1,123 @@
+---
+title: "Publications"
+subtitle: "Machine-learning drug discovery, structural bioinformatics and antimicrobial resistance"
+description: "Publications by Godswill Imolele Anthony: first-author work on machine-learning QSAR and molecular dynamics for tuberculosis and GRK5, plus collaborative work on AMR, immunoinformatics and drug safety."
+page-layout: article
+---
+
+Ten outputs since 2020 (nine journal articles and one preprint), including **two first-author papers** on machine-learning-guided drug discovery. My current work extends this toward uncertainty-aware AMR surveillance; see [Projects](projects.qmd).
+
+[ORCID 0000-0002-3093-3309](https://orcid.org/0000-0002-3093-3309) · [Google Scholar]([SCHOLAR-LINK]) · [PubMed]([PUBMED-LINK])
+
+::: {.callout-note appearance="simple"}
+## Finding all of my work
+My name appears in several forms across the literature (Anthony G. I., Anthony Godswill Imolele, Imolele A. G.). All of them refer to me, **Godswill Imolele Anthony**. The ORCID above links them.
+:::
+
+---
+
+# Featured
+
+## Discovery of novel InhA inhibitors by structural bioinformatics and machine-learning QSAR
+
+**First and corresponding author**
+
+**Anthony, G. I.**, et al. (2026). Discovery of novel InhA inhibitors through structural bioinformatics and machine learning-driven QSAR screening of natural products. *Biology Methods and Protocols*, 11(1), bpag015. [doi:10.1093/biomethods/bpag015](https://doi.org/10.1093/biomethods/bpag015)
+
+A machine-learning QSAR and structural-bioinformatics workflow for screening natural products against InhA, a validated tuberculosis target, integrating molecular descriptors, model evaluation, docking and molecular dynamics. [Figure and details on the Projects page](projects.qmd).
+
+`Machine learning` · `QSAR` · `Molecular dynamics` · `Tuberculosis`
+
+---
+
+# Computational drug discovery
+
+## Molecular AI for GRK5 ligand discovery
+
+**First author**
+
+**Anthony, G. I.**, Ogbozor, F. I., Atanda, D. O., Bodun, D. S., Folaranmi, I. O., Eguavoen, A. E., Olaide, T. H., Nwachukwu, F. U., Ohilebo, A. A., Okotie, G. E., Adubi, P. O., & Ayangoke, O. A. (2025). In silico evaluation of 4-quinolone ligands interacting with human G protein-coupled receptor kinase 5 using message-passing neural networks, molecular docking and molecular dynamics simulation. *Egyptian Journal of Medical Human Genetics*. [doi:10.1186/s43042-025-00780-x](https://doi.org/10.1186/s43042-025-00780-x)
+
+Combines graph-based deep learning with structure-based modelling to evaluate 4-quinolone compounds against GRK5.
+
+`Message-passing neural networks` · `Molecular docking` · `Molecular dynamics`
+
+## Machine learning and structural bioinformatics for Chagas disease
+
+**Contributing author**
+
+Omoseeye, S. D., Azekhuoria, D. O., Owolade, A. J., Ibeh, S. J., **Anthony, G. I.**, Adaramola, I. M., Adeniyi, A. A., Iwuji, C. B., Adedara, J. F., & Bodun, D. S. (2026). Integrative machine learning and structural bioinformatics strategies for the identification of selective sterol 14α-demethylase inhibitors targeting *Trypanosoma cruzi*. *In Silico Research in Biomedicine*, 2, 100182. [doi:10.1016/j.insi.2026.100182](https://doi.org/10.1016/j.insi.2026.100182)
+
+`Neglected tropical diseases` · `Machine learning` · `Structural bioinformatics`
+
+---
+
+# Antimicrobial resistance
+
+## The impact of antimicrobial resistance on cancer treatment
+
+**Co-author**
+
+Lawal, O. P., Ahmed, N. K., Ilesanmi, T. A., **Anthony, G. I.**, Nwosu, S. N., Ogungbemiro, F. O., Olaide, Z., Adeniyi, M. M., Okoye, U. L., Folayan, A. M., Christopher, A. A., & Oseghale, I. D. (2024). The impact of antimicrobial resistance on cancer treatment: current evidence and future directions. *Asian Journal of Research in Medical and Pharmaceutical Sciences*, 13(4), 9–27. [doi:10.9734/ajrimps/2024/v13i4270](https://doi.org/10.9734/ajrimps/2024/v13i4270)
+
+How resistant infections complicate cancer treatment and why stewardship matters in immunocompromised patients.
+
+`Antimicrobial resistance` · `Oncology` · `Stewardship`
+
+## Evidence-based management of urinary tract infections
+
+**Co-author**
+
+Ibiyemi, F. O., Awoniran, D., **Anthony, G. I.**, Odetayo, I. K., & Ayomide, L. F. (2025). Evidence-based management of urinary tract infections: balancing efficacy, safety and antimicrobial stewardship. *International Journal of Research in Pharmacy and Allied Science*, 4(10). [doi:10.71431/IJRPAS.2025.41003](https://doi.org/10.71431/IJRPAS.2025.41003)
+
+`Urinary tract infections` · `Stewardship` · `Clinical therapeutics`
+
+---
+
+# Immunoinformatics and vaccine design
+
+## Epitope-based vaccine candidate for Lassa mammarenavirus
+
+**Co-author**
+
+Abass, O. A., Timofeev, V. I., Sarkar, B., Onobun, D. O., Ogunsola, S. O., Aiyenuro, A. E., Aborode, A. T., Aigboje, A. E., Omobolanle, B. N., **Imolele, A. G.**, & Abiodun, A. A. (2022). Immunoinformatics analysis to design a novel epitope-based vaccine candidate targeting the glycoprotein and nucleoprotein of Lassa mammarenavirus using strains from Nigeria. *Journal of Biomolecular Structure and Dynamics*, 40(16), 7283–7302. [doi:10.1080/07391102.2021.1896387](https://doi.org/10.1080/07391102.2021.1896387)
+
+Selects conserved CTL, HTL and B-cell epitopes from Lassa glycoprotein and nucleoprotein sequences and validates the construct by docking, molecular dynamics and immune simulation.
+
+`Lassa fever` · `Immunoinformatics` · `Vaccine design`
+
+## Peptide-based vaccine design for malaria
+
+**Co-author**
+
+Ogunniran, J. A., Oladipo, E. K., **Anthony, G. I.**, Ademola, K. O., Alao, O. K., Ajayi, K. O., Ockiya, M. A., Taiwo, O. R., Samuel, N. N., & Christianah, O. A. (2024). Immunoinformatics design of a peptide-based vaccine for malaria infection. *Eclética Química*. [Publication](https://revista.iq.unesp.br/index.php/ecletica/article/view/1555)
+
+`Malaria` · `Epitope prediction` · `Vaccine design`
+
+---
+
+# Evidence synthesis and clinical pharmacology
+
+## Antipsychotic medications and patient safety
+
+**Co-author**
+
+Ibiyemi, F. O., **Anthony, G. I.**, Rasheedat, S., Ayomide, L. F., & Adetayo, I. K. (2025). Antipsychotic medications and patient safety: a systematic analysis of adverse drug reactions across drug classes. *International Journal of Research in Pharmacy and Allied Science*, 4(10), 66–85.
+
+`Drug safety` · `Pharmacovigilance` · `Evidence synthesis`
+
+---
+
+# Earlier laboratory work
+
+- Nwosu, S. N., **Anthony, G. I.**, et al. (2024). Tannin extraction and analysis in *Telfairia occidentalis* seeds: a TLC and UV-based approach. *Asian Journal of Medical Principles and Clinical Practice*, 7(2), 400–407. [Publication](https://journalajmpcp.com/index.php/AJMPCP/article/view/248)
+- Andowase, P., & **Anthony, G. I.** (2020). The effect of combined treatment of vitamin C and loperamide on intestinal Na⁺/K⁺-ATPase, alkaline phosphatase and lipid peroxidation in castor oil-induced diarrhoeal rats. *bioRxiv* preprint. [doi:10.1101/2020.11.13.380469](https://doi.org/10.1101/2020.11.13.380469)
+
+<!--
+IN PREPARATION: add this block only when the status is accurate
+- Two manuscripts on the role of microbial genes in pancreatic cancer promotion and progression (status: [IN PREPARATION / UNDER REVIEW / PREPRINT LINK]).
+-->
+
+---
+
+*[Projects](projects.qmd) · [Experience](experience.qmd) · [About](about.qmd) · [anthonyimolele@gmail.com](mailto:anthonyimolele@gmail.com)*

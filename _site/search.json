@@ -1,0 +1,338 @@
+[
+  {
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "Research",
+    "section": "",
+    "text": "Biomedicine can now generate molecular data at extraordinary scale. What remains hard is knowing which signals are real, which conclusions will generalise, and which predictions are trustworthy enough to act on.\nMy research tackles that problem where the stakes are highest and the data are thinnest: antimicrobial resistance (AMR). I build models that report not only what they predict, but when, why and for whom that prediction should be trusted, and I treat their failures as information about hidden biology rather than as noise.\nflowchart LR\n    A[\"Heterogeneous data&lt;br/&gt;(labs, methods, countries, years)\"] --&gt; B[\"Hierarchical model&lt;br/&gt;with quantified uncertainty\"]\n    B --&gt; C[\"Disagreement flagged&lt;br/&gt;(genotype vs phenotype,&lt;br/&gt;model vs sensitivity analysis)\"]\n    C --&gt; D[\"Decision-grade evidence&lt;br/&gt;for researchers and policy\"]"
+  },
+  {
+    "objectID": "research.html#evidence-synthesis-under-heterogeneity",
+    "href": "research.html#evidence-synthesis-under-heterogeneity",
+    "title": "Research",
+    "section": "1. Evidence synthesis under heterogeneity",
+    "text": "1. Evidence synthesis under heterogeneity\nThe question: how do we combine surveillance data that differ in laboratory, method, breakpoint and year, without pretending they are the same or throwing away what sparse settings can teach us?\nWhat I have done:\n\nArgus AI: a Bayesian hierarchical synthesis of 4.95 million isolate–drug observations (71 countries, 44 species, ten antibiotics, 2004–2024), linked to global AMR R&D investment, with partial pooling and isolate-weighted and country-balanced sensitivity analyses. Global AMR R&D Hub Cross-Domain Award, 2026 Vivli AMR Surveillance Data Challenge.\nResistAI+: Bayesian change-point modelling, MIC-creep analysis and posterior-predictive forecasting across multi-country data. Finalist, top 10% of 100+ teams, 2025 Vivli AMR Surveillance Global Data Challenge."
+  },
+  {
+    "objectID": "research.html#disagreement-as-a-signal",
+    "href": "research.html#disagreement-as-a-signal",
+    "title": "Research",
+    "section": "2. Disagreement as a signal",
+    "text": "2. Disagreement as a signal\nThe question: when phenotype says resistant and the genome says susceptible, is that an error, a new mechanism, or a limit of the method? Most pipelines quietly choose one source. I think the disagreement itself should be modelled.\nWhat I have done:\n\nNaijaResist: a prototype that reconciles phenotypic resistance, gene burden, cross-species transfer and organism-level threat, flagging discordance so it is visible and reviewable, alongside machine-learning resistance prediction and trend analysis for Nigeria.\nAGARI E. coli data integration (BioSeq, Africa CDC / ASLM): contributed to a proposal that defines AMR results at the highest justified resolution (family, allele, mutation, mechanism) with call-resolution state and tool, database and version provenance, a PHA4GE hAMRonization mapping, and genotype–phenotype discordance flags that retain both sources."
+  },
+  {
+    "objectID": "research.html#trustworthy-computational-discovery",
+    "href": "research.html#trustworthy-computational-discovery",
+    "title": "Research",
+    "section": "3. Trustworthy computational discovery",
+    "text": "3. Trustworthy computational discovery\nThe question: a ranked list of candidate molecules is only useful if we know how far to trust the ranking. How do we build discovery pipelines whose reliability can be examined at each step, so that a high computational score cannot rescue an implausible molecule?\nWhat I have done:\n\nMorph-HSV: resistance-aware antiviral prioritisation (team lead)\n2026 Shanghai Computational Biology competition, preliminary round · Team of four · Code\nThe task was to rank 100 non-nucleoside candidates against HSV-1 DNA polymerase for experimental testing, while accounting for resistance-associated variants and chemical feasibility. I led a team that treated this as a multi-stage prioritisation problem instead of a single-score virtual screen.\n\n\n\n\n\nflowchart LR\n    A[\"~22,000 compounds&lt;br/&gt;literature, docking evidence,&lt;br/&gt;ChEMBL and similarity mining\"] --&gt; B[\"1,004 molecules&lt;br/&gt;541 scaffolds&lt;br/&gt;scaffold-aware QSAR\"]\n    B --&gt; C[\"~5 million molecules screened&lt;br/&gt;Top 1,000\"]\n    C --&gt; D[\"374 after property&lt;br/&gt;and feasibility filters\"]\n    D --&gt; E[\"Glide HTVS/XP re-docking&lt;br/&gt;against 8VQ2\"]\n    E --&gt; F[\"Ranked Top 100&lt;br/&gt;with resistance-variant checks\"]\n\n\n\n\n\n\n\nScaffold-aware evaluation. Models (Random Forest, XGBoost, LightGBM, Ridge) were validated on non-overlapping scaffold groups, so that performance reflects prediction on new chemistry rather than near-copies of training molecules. The production model reached a mean R² of 0.55 ± 0.07 (RMSE 0.74, MAE 0.59) across ten randomised scaffold splits. I report this deliberately conservative figure because it is the honest one.\nExplicit gates, not one score. The final ranking combines QSAR prediction, XP docking, synthetic accessibility, drug-likeness, physicochemical and structural-alert criteria, and scaffold-diversity control, with matched re-docking against wild-type and the W781V, N815S and Y941H resistance variants where available.\nAuditability. Large-library screening preserved identifiers and failed-structure logs, and top candidates received manual pose review.\nStatus: [PRELIMINARY ROUND SUBMITTED. ADD OUTCOME ONLY WHEN ANNOUNCED AND ACCURATE.] These are computational predictions; none has yet been experimentally tested.\n\n\n\nEarlier discovery work\n\nFirst-author study of natural-product inhibitors of InhA, a tuberculosis target, combining molecular descriptors, model evaluation, docking and molecular dynamics (Biology Methods and Protocols, 2026).\nFirst-author study of 4-quinolone ligands for GRK5 using message-passing neural networks, docking and molecular dynamics (Egyptian Journal of Medical Human Genetics, 2025).\nWinner, 2025 Advanced CADD Machine-Learning Drug Discovery Challenge, with leading enrichment factor and error performance in an international West African cohort."
+  },
+  {
+    "objectID": "research.html#from-molecular-signal-to-clinical-outcome",
+    "href": "research.html#from-molecular-signal-to-clinical-outcome",
+    "title": "Research",
+    "section": "4. From molecular signal to clinical outcome",
+    "text": "4. From molecular signal to clinical outcome\nThe question: why do patients with seemingly similar molecular profiles have very different outcomes?\nWhat I have done: built multi-omics survival models integrating transcriptomic, whole-genome, immune and clinical data, and found with Cox proportional-hazards modelling that low HLA class I expression predicts poorer outcomes. I also analysed RNA-seq and microarray cohorts (DESeq2, limma, GSEA) from a Sri Lankan nasopharyngeal carcinoma study. This thread taught me to ask what a model is missing, not only what it captures."
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Most tools for antimicrobial resistance (AMR) tell you what has happened. The ones I build also tell you how sure they are, where their data run out, and where the sources disagree. The projects below follow that idea from global surveillance to a single protein pocket.\nAll three surveillance systems were developed at the Helix Biogen Institute. The dashboards run on free hosting, so one that has been idle may take around 30 seconds to wake. Please give it a moment."
+  },
+  {
+    "objectID": "projects.html#argus-ai-where-the-threat-and-the-response-fail-to-meet",
+    "href": "projects.html#argus-ai-where-the-threat-and-the-response-fail-to-meet",
+    "title": "Projects",
+    "section": "Argus AI: where the threat and the response fail to meet",
+    "text": "Argus AI: where the threat and the response fail to meet\nGlobal AMR R&D Hub Cross-Domain Award, 2026 Vivli AMR Surveillance Data Challenge · Project lead, Helix Biogen Institute · Open dashboard\n\nThe problem\nAMR burden, resistance mechanisms, surveillance capacity, research funding and drug-development activity are usually assessed separately. That makes it hard to see whether the greatest threats are getting proportionate scientific and financial attention.\n\n\n\nWhat I built\nA Bayesian hierarchical evidence synthesis of 4.95 million isolate–drug observations (71 countries, 44 species, ten antibiotics, 2004–2024), combined with global AMR R&D investment data. The framework integrates:\n\nBayesian burden–funding alignment, with partial pooling so sparse countries borrow strength without being treated as identical\nIsolate-weighted and country-balanced sensitivity analyses, so conclusions do not hinge on one modelling choice\nResistance-mechanism intelligence and drug-pipeline performance\nSurveillance-equity diagnostics and policy-effect analysis\nCitation-grounded AI evidence retrieval, with versioned data lineage so every claim can be traced to its source\n\n\n\nWhat it shows\nWhere resistance burden, therapeutic vulnerability, scientific attention and investment are most dangerously misaligned, and how much that conclusion depends on how the data are weighted.\n\n\n\nArgus AI dashboard: [ADD A ONE-LINE CAPTION OF WHAT THIS PANEL SHOWS]\n\n\n\n\n\nArgus AI dashboard: [CAPTION]\n\n\n\n\n\nArgus AI dashboard: [CAPTION]\n\n\nLimits I am explicit about: surveillance data are unevenly sampled, and absence of reported resistance is not evidence of absence. The sensitivity analyses exist to show where conclusions are fragile."
+  },
+  {
+    "objectID": "projects.html#resistai-resistance-with-error-bars-and-a-forecast",
+    "href": "projects.html#resistai-resistance-with-error-bars-and-a-forecast",
+    "title": "Projects",
+    "section": "ResistAI+: resistance with error bars and a forecast",
+    "text": "ResistAI+: resistance with error bars and a forecast\nFinalist, top 10% of 100+ teams, 2025 Vivli AMR Surveillance Global Data Challenge · Team lead, data analysis and deployment, Helix Biogen Institute · Open dashboard\n\nThe problem\nMost AMR platforms describe where resistance has occurred. Few say how confidently it can be estimated, why it may be changing, or where it may emerge next.\n\n\nWhat I built\nAn interactive platform on Pfizer ATLAS data (2004–2023) that combines:\n\nBayesian hierarchical modelling of temporal and geographic variation in non-susceptibility\nChange-point detection and MIC-creep analysis for levofloxacin, meropenem and linezolid\nResistance-risk prediction and posterior-predictive, time-to-threshold forecasting\nCausal analysis using directed acyclic graphs\nPolicy-priority analytics across countries\n\n\n\nWhat it shows\nNot only which resistance patterns exist, but how much each estimate can be trusted, when trends shifted, and which settings deserve attention first.\n\n\n\nResistAI+ interface: [CAPTION]\n\n\n\n\n\nPolicy-priority heatmap from ResistAI+: [CAPTION]\n\n\nLimits I am explicit about: the causal graphs encode assumptions, and the forecasts are conditional on trends continuing. The dashboard shows intervals, not single numbers, for this reason."
+  },
+  {
+    "objectID": "projects.html#naijaresist-prediction-that-shows-where-the-evidence-disagrees",
+    "href": "projects.html#naijaresist-prediction-that-shows-where-the-evidence-disagrees",
+    "title": "Projects",
+    "section": "NaijaResist: prediction that shows where the evidence disagrees",
+    "text": "NaijaResist: prediction that shows where the evidence disagrees\nPrototype · Project lead and architect, Helix Biogen Institute · Open dashboard\n\nThe problem\nSurveillance in Nigeria is fragmented across hospitals, laboratories, pathogens and regions. Where phenotypic resistance and genetic evidence disagree, most pipelines quietly pick one and move on. And without integration, emerging hotspots are hard to see.\n\n\nWhat I built\nA prototype AMR intelligence system for Nigeria that combines two things usually kept apart:\n\nPrediction and trends: machine-learning resistance prediction, geographic and temporal trend analysis, epidemiological forecasting and pathogen–antibiotic profiling\nGenotype–phenotype reconciliation: phenotypic resistance, gene burden, cross-species transfer and organism-level threat are reconciled, and discordance is flagged so that it is visible and reviewable rather than hidden\n\n\n\nWhat it shows\nWhere the models and the genomic evidence agree, where they diverge, and which divergences deserve an expert’s attention. Often that is where the most interesting biology, or the most important data-quality problem, sits.\n\n\n\nNaijaResist interface: [CAPTION]\n\n\n\n\n\nNaijaResist interface: [CAPTION]\n\n\nLimits I am explicit about: this is a prototype built on the data currently available, and it is designed to support review by experts, not to replace it."
+  },
+  {
+    "objectID": "projects.html#natural-product-inhibitors-of-inha-a-tuberculosis-target",
+    "href": "projects.html#natural-product-inhibitors-of-inha-a-tuberculosis-target",
+    "title": "Projects",
+    "section": "Natural-product inhibitors of InhA, a tuberculosis target",
+    "text": "Natural-product inhibitors of InhA, a tuberculosis target\nFirst and corresponding author · Biology Methods and Protocols (2026) · Paper · [GITHUB-LINK]\nI developed a machine-learning-driven QSAR and structural-bioinformatics workflow for screening natural products against InhA. It integrates molecular descriptors, model evaluation, docking and molecular dynamics. The aim was a pipeline in which each step’s reliability can be examined, not only a ranked list of candidates.\n\n\n\nStructural stability of the top-ranked hits over a 100 ns molecular dynamics simulation. RMSD of the InhA apo form (black) and four top-hit complexes (LTS0023082, LTS0064866, LTS0078946, LTS0161715) settles after roughly 40 ns and stays within a narrow band of about 2 to 3 Å for the remainder of the run, comparable to the unliganded protein. [STATE WHAT RMSD IS CALCULATED ON, E.G. PROTEIN BACKBONE.]"
+  },
+  {
+    "objectID": "projects.html#quinolone-ligands-and-grk5",
+    "href": "projects.html#quinolone-ligands-and-grk5",
+    "title": "Projects",
+    "section": "4-quinolone ligands and GRK5",
+    "text": "4-quinolone ligands and GRK5\nFirst author · Egyptian Journal of Medical Human Genetics (2025) · Paper\nAn in silico evaluation of 4-quinolone ligands interacting with GRK5, combining message-passing neural networks, molecular docking and molecular dynamics."
+  },
+  {
+    "objectID": "projects.html#winner-2025-advanced-cadd-machine-learning-drug-discovery-challenge",
+    "href": "projects.html#winner-2025-advanced-cadd-machine-learning-drug-discovery-challenge",
+    "title": "Projects",
+    "section": "Winner, 2025 Advanced CADD Machine-Learning Drug Discovery Challenge",
+    "text": "Winner, 2025 Advanced CADD Machine-Learning Drug Discovery Challenge\nLed the field on enrichment factor and error performance in an international West African cohort. [ADD ONE SENTENCE ON YOUR MODEL AND TARGET]"
+  },
+  {
+    "objectID": "projects.html#contributing-author-trypanosoma-cruzi-and-lassa-virus",
+    "href": "projects.html#contributing-author-trypanosoma-cruzi-and-lassa-virus",
+    "title": "Projects",
+    "section": "Contributing author: Trypanosoma cruzi and Lassa virus",
+    "text": "Contributing author: Trypanosoma cruzi and Lassa virus\n\nSterol 14α-demethylase inhibitors for T. cruzi (contributing author, In Silico Research in Biomedicine, 2026): integrative machine learning and structural bioinformatics for selective inhibitors. Paper\nEpitope-based vaccine candidate for Lassa mammarenavirus (co-author, Journal of Biomolecular Structure and Dynamics, 2022): immunoinformatics using strains from Nigeria. Paper"
+  },
+  {
+    "objectID": "projects.html#hla-class-i-and-survival",
+    "href": "projects.html#hla-class-i-and-survival",
+    "title": "Projects",
+    "section": "HLA class I and survival",
+    "text": "HLA class I and survival\nIntegrated transcriptomic, whole-genome, immune and clinical data into Cox proportional-hazards models and found that low HLA class I expression predicts poorer outcomes. Analysed RNA-seq and microarray data from a Sri Lankan nasopharyngeal carcinoma cohort using DESeq2, limma and gene-set enrichment."
+  },
+  {
+    "objectID": "projects.html#ebola-zaire-diagnostic-target-discovery",
+    "href": "projects.html#ebola-zaire-diagnostic-target-discovery",
+    "title": "Projects",
+    "section": "Ebola Zaire diagnostic target discovery",
+    "text": "Ebola Zaire diagnostic target discovery\nIdentified a gap in Ebola Zaire strain diagnosis, then led a collaborative project to select and analyse immunogenic genes and design a potential construct for a lateral-flow diagnostic test kit."
+  },
+  {
+    "objectID": "experience.html",
+    "href": "experience.html",
+    "title": "Experience",
+    "section": "",
+    "text": "A scientist who models data should understand how data are made. My path runs from ELISA plates and mouse colonies, through survival models and metagenomics, to Bayesian synthesis of millions of resistance observations. Each stage changed how I think about evidence, and each one is still in how I work."
+  },
+  {
+    "objectID": "experience.html#bioinformatics-associate-level-3",
+    "href": "experience.html#bioinformatics-associate-level-3",
+    "title": "Experience",
+    "section": "Bioinformatics Associate (Level 3)",
+    "text": "Bioinformatics Associate (Level 3)\nBioSeq LTD · Remote, project-based · 4 October 2026 – present\nI support infection genomics, metagenomics and multi-omics projects, with a focus on turning heterogeneous data into evidence that others can audit.\n\nAGARI E. coli data integration (Africa CDC / ASLM): scientific contributor to BioSeq’s proposal to bring E. coli genomic surveillance into the African Genomes Archive for Response and Insights (AGARI).\nResolution-aware AMR results: defined resistance calls at the highest justified resolution (family, allele, mutation, mechanism), each with call-resolution state and tool, database and version provenance, and proposed a PHA4GE hAMRonization mapping across AMR-detection tools.\nDiscordance made visible: proposed genotype–phenotype discordance flags that retain both sources, method–drug–breakpoint compatibility checks, event-level lineage and synthetic acceptance cases.\n\n\n\n\n\n\n\nTipWhat this is teaching me\n\n\n\nSurveillance fails quietly when data are merged without provenance. Making every call traceable is as important as the model on top of it."
+  },
+  {
+    "objectID": "experience.html#project-lead-research-teaching-assistant",
+    "href": "experience.html#project-lead-research-teaching-assistant",
+    "title": "Experience",
+    "section": "Project Lead, Research & Teaching Assistant",
+    "text": "Project Lead, Research & Teaching Assistant\nHelix Biogen Institute, Nigeria · February 2020 – present\nHere I moved from running experiments to designing analyses and leading people. The work spans cancer genomics, metagenomics, diagnostics and, most recently, Bayesian AMR surveillance.\n\nBayesian AMR surveillance: ResistAI+\n\nLed the development of ResistAI+, an uncertainty-aware AMR surveillance platform built on Pfizer ATLAS data (2004–2023).\nModelled temporal and geographic variation in antimicrobial non-susceptibility with Bayesian hierarchical models, and developed change-point and MIC-creep analyses for levofloxacin, meropenem and linezolid.\nAdded forecasting and decision support: posterior-predictive and time-to-threshold forecasting, delivered as an interactive, evidence-aware dashboard.\nOutcome: finalist, top 10% of 100+ international teams, 2025 Vivli AMR Surveillance Global Data Challenge.\n\n\n\nComputational oncology and multi-omics\n\nBuilt survival models integrating transcriptomic, whole-genome, HLA class I immune and clinical variables.\nFinding: with Cox proportional-hazards modelling, reduced HLA-I expression predicted poorer survival, linking immune-surveillance biology to clinical outcome.\nAnalysed RNA-seq and microarray data from a Sri Lankan nasopharyngeal carcinoma cohort using DESeq2, limma and gene-set enrichment, identifying tumour-associated transcriptional signatures and immune-pathway dysregulation.\n\n\n\nCancer metagenomics\n\nLed a four-month project with nine undergraduate students on microbial signatures associated with pancreatic cancer, using sequencing-based microbial profiling and comparative bioinformatics.\nCoordinated the full arc: design, analytical workflow, interpretation and research training, from question to manuscript.\nProduced two manuscripts on the role of microbial genes in pancreatic cancer promotion and progression, identifying key genes and exploring their potential as therapeutic targets or biomarkers.\n\n\n\nTranslational diagnostics: Ebola Zaire\n\nIdentified a gap in Ebola Zaire strain diagnosis and led a collaborative project to select and analyse immunogenic genes and epitopes using computational immunology.\nEvaluated candidates for antigen specificity, immunogenic potential and suitability for diagnostics, and designed a potential construct for a lateral-flow test kit.\n\n\n\nTeaching and mentorship\n\nSupervise undergraduate students across bioinformatics, genomics and computational biology, from forming a research question to preparing a manuscript.\nTeach applied Python, R, machine learning, sequence analysis, structural bioinformatics and reproducible research.\n\n\n\n\n\n\n\nTipWhat this taught me\n\n\n\nThat a result is not finished until someone else can reproduce it, and that the best test of understanding a method is teaching it to someone who has never seen it."
+  },
+  {
+    "objectID": "experience.html#further-amr-systems",
+    "href": "experience.html#further-amr-systems",
+    "title": "Experience",
+    "section": "Further AMR systems",
+    "text": "Further AMR systems\nAlongside ResistAI+, I lead and architect two further systems that extend the same idea: make uncertainty and disagreement visible. See full project pages.\n\nArgus AI (project lead): Bayesian synthesis of 4.95 million isolate–drug observations across 71 countries, 44 species and ten antibiotics (2004–2024), linked with global AMR R&D investment data. Global AMR R&D Hub Cross-Domain Award, 2026 Vivli AMR Surveillance Data Challenge.\nNaijaResist (architect): prototype AMR intelligence system for Nigeria that reconciles phenotype and genotype so that discordance is visible and reviewable."
+  },
+  {
+    "objectID": "experience.html#laboratory-research-assistant",
+    "href": "experience.html#laboratory-research-assistant",
+    "title": "Experience",
+    "section": "Laboratory Research Assistant",
+    "text": "Laboratory Research Assistant\nDepartment of Biochemistry, Nigerian Institute of Medical Research (NIMR) · February 2018 – July 2019\nThis was my foundation. Before I wrote a single model, I spent a year generating the numbers models depend on.\n\nPerformed 200+ ELISA and turbidimetric immunoassays and 20+ Western blots, including sample preparation, assay optimisation and quality control.\nManaged GLP-controlled mouse colonies for preclinical studies, keeping documented records and supporting welfare and regulatory compliance.\nCarried out nucleic-acid extraction, PCR, gel electrophoresis, spectrometry and chromatography-related procedures.\nStandardised experimental procedures to improve consistency and reproducibility across assays.\n\n\n\n\n\n\n\nTipWhat this taught me\n\n\n\nEvery data point has a hand, an instrument and a day behind it. That understanding shapes how I treat measurement error, batch effects and missing data now.\n\n\n\nLooking for the evidence behind this page? Publications · Projects · About"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Every antibiotic ever made is an argument with evolution, and evolution has had four billion years of practice. Resistance is what it looks like when that argument is being lost: slowly, quietly, one hospital ward at a time.\nThe data that should tell us where we are losing are patchy, unevenly collected, and often thinnest in the places where infection hits hardest. A model trained on such data can sound certain and be wrong. So I build the other kind: models that say not only what they predict, but how far, when, and for whom that prediction can be trusted.\nI am Godswill Imolele Anthony, a computational biologist working on explainable, uncertainty-aware AI for antimicrobial resistance (AMR) and antimicrobial discovery. I am seeking a PhD where this work can grow into a rigorous, independent research programme.\nPublications · ORCID 0000-0002-3093-3309 · anthonyimolele@gmail.com"
+  },
+  {
+    "objectID": "about.html#try-the-work-not-just-read-about-it",
+    "href": "about.html#try-the-work-not-just-read-about-it",
+    "title": "About",
+    "section": "Try the work, not just read about it",
+    "text": "Try the work, not just read about it\nThree systems I built are live. Each one makes its uncertainty visible.\n\n\n\nSystem\nWhat it does\nLive\nCode\n\n\n\n\nArgus AI\nBayesian hierarchical synthesis of 4.95M isolate–drug observations with global AMR R&D investment data, to expose the gap between threat and innovation\nOpen dashboard\n[GITHUB-LINK]\n\n\nResistAI+\nBayesian change-point modelling, MIC-creep analysis and posterior-predictive forecasting across multi-country data\nOpen dashboard\n[GITHUB-LINK]\n\n\nNaijaResist\nGenotype–phenotype reconciliation for Nigeria, making discordance visible and reviewable\nOpen dashboard\n[GITHUB-LINK]"
+  },
+  {
+    "objectID": "about.html#three-questions-that-drive-my-work",
+    "href": "about.html#three-questions-that-drive-my-work",
+    "title": "About",
+    "section": "Three questions that drive my work",
+    "text": "Three questions that drive my work\n1. Which signals are real? Surveillance data are heterogeneous: different laboratories, methods, breakpoints and years. Partial pooling lets sparse settings borrow strength from richer ones without pretending they are the same. In Argus AI, I checked the conclusions with isolate-weighted and country-balanced sensitivity analyses, so the results do not depend on one modelling choice.\n2. Where do predictions stop being trustworthy? Biomarkers and models often lose validity when they cross ancestries, health systems or pathogen lineages. I treat that failure as information about hidden biological structure rather than as noise to be averaged away.\n3. Can a model show its disagreement? Phenotype says resistant; the genome says susceptible. Most pipelines quietly pick one. In NaijaResist, I keep both sources, flag the discordance, and make it reviewable, because that disagreement is often where the biology is."
+  },
+  {
+    "objectID": "about.html#how-i-got-here",
+    "href": "about.html#how-i-got-here",
+    "title": "About",
+    "section": "How I got here",
+    "text": "How I got here\nI began at the bench. As a research assistant at the Nigerian Institute of Medical Research, I ran more than 200 ELISA and TIA assays and 20+ Western blots, and managed mouse colonies under Good Laboratory Practice. That taught me something many modellers never learn: how data are made, and how many small decisions sit between a living system and a number in a spreadsheet.\nAt the Helix Biogen Institute, I moved into bioinformatics and statistical modelling. I integrated transcriptomic, immune, whole-genome and clinical data into survival models, finding that low HLA class I expression predicts poorer outcomes, and I led a four-month metagenomics project with nine junior researchers.\nFrom there, the thread tightened around one question: how do we make computational biology honest enough to guide decisions about infection? That led to AMR surveillance, to Bayesian forecasting, and to machine-learning discovery of new inhibitors, including a first-author study of natural-product inhibitors of InhA, a tuberculosis target, published in Biology Methods and Protocols (2026). I also work as a bioinformatics associate on infection genomics and metagenomics projects, including a proposal to integrate E. coli genomic surveillance into the African Genomes Archive for Response and Insights (AGARI)."
+  },
+  {
+    "objectID": "about.html#why-africa-is-a-scientific-argument-not-only-an-equity-one",
+    "href": "about.html#why-africa-is-a-scientific-argument-not-only-an-equity-one",
+    "title": "About",
+    "section": "Why Africa is a scientific argument, not only an equity one",
+    "text": "Why Africa is a scientific argument, not only an equity one\nAfrican populations and pathogens hold some of the greatest genetic diversity on Earth, yet they are underrepresented in the datasets that shape biomedical knowledge. That is an issue of fairness. It is also a discovery problem. Models built on narrow populations carry assumptions they cannot see, and the cases where those models fail teach us what is actually universal and what only seemed to be.\nWhere data are sparse, quantifying uncertainty is not a luxury; it is the only responsible way to reason. That is why I build from Nigeria, and why I think this setting can produce methods the rest of the world will need."
+  },
+  {
+    "objectID": "about.html#what-i-am-looking-for-in-a-phd",
+    "href": "about.html#what-i-am-looking-for-in-a-phd",
+    "title": "About",
+    "section": "What I am looking for in a PhD",
+    "text": "What I am looking for in a PhD\nI want to train in a group that takes both rigorous statistics and real biological data seriously. Specifically, I hope to:\n\nDevelop calibrated, transportable models for resistance and drug discovery that hold up across populations and pathogen lineages\nStrengthen my foundations in Bayesian inference, causal reasoning and probabilistic machine learning\nWork with pathogen genomics and experimental collaborators so that predictions are tested against biology, not only benchmarks\nBuild open, reproducible tools that other researchers, including those in low-resource settings, can reuse\n\nI bring a record of delivering end to end: from messy multi-country data, through models with quantified uncertainty, to systems people can actually use. I am looking for the mentorship to take that to the next level."
+  },
+  {
+    "objectID": "about.html#what-i-work-on",
+    "href": "about.html#what-i-work-on",
+    "title": "About",
+    "section": "What I work on",
+    "text": "What I work on\n\nBayesian and probabilistic modelling: hierarchical models, change-point analysis, posterior-predictive forecasting, sensitivity analysis\nAI for molecular discovery: QSAR, message-passing neural networks, docking and molecular dynamics, scaffold-aware evaluation\nGenomic data integration: genotype–phenotype reconciliation, metadata harmonisation, provenance and reproducible pipelines\nTranslational omics: RNA-seq and multi-omics survival modelling with Cox proportional-hazards"
+  },
+  {
+    "objectID": "about.html#beyond-the-lab",
+    "href": "about.html#beyond-the-lab",
+    "title": "About",
+    "section": "Beyond the lab",
+    "text": "Beyond the lab\nI lead research-skills workshops for around 81 members of the African Community for Systematic Review and Meta-Analysis, and I mentor early-career researchers in reproducible bioinformatics. If a method only works when its author is in the room, it is not yet science. I try to leave behind workflows, documentation and people who can carry them forward."
+  },
+  {
+    "objectID": "about.html#where-this-is-going",
+    "href": "about.html#where-this-is-going",
+    "title": "About",
+    "section": "Where this is going",
+    "text": "Where this is going\nMy long-term aim is to lead a research programme that makes precision medicine and AMR response more trustworthy, more generalisable, and more representative of humanity: systems that expose their uncertainty, survive changes of population and context, illuminate mechanism, and help turn molecular evidence into responsible action.\n· Publications · Research :::"
+  },
+  {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Let’s Advance Biomedical Discovery Together",
+    "section": "",
+    "text": "Scientific progress is driven by collaboration across disciplines, institutions, and perspectives.\nI welcome conversations with researchers, principal investigators, students, clinicians, and industry scientists who share an interest in computational biology, artificial intelligence, and data-driven biomedical discovery.\nWhether the discussion involves collaborative research, graduate opportunities, computational methods, or open science, I am always interested in exchanging ideas that have the potential to advance meaningful scientific work.\n\n\n\nI am particularly interested in collaborations involving:\n\nComputational Biology\nBioinformatics\nComputational Genomics\nArtificial Intelligence for Biomedicine\nMachine Learning\nStructural Bioinformatics\nComputational Drug Discovery\nPrecision Medicine\nCancer Biology\nInfectious Diseases\nMulti-omics Integration\nOpen Science\n\n\n\n\n\nEmail\nanthonyimolele@gmail.com\nORCID\nGitHub\nLinkedIn\nResearchGate\n\n\n\n\nI am currently seeking opportunities to contribute to ambitious research environments where computational approaches can generate new biological insight and accelerate biomedical discovery.\nI am particularly interested in collaborations involving:\n\nComputational genomics\nAI-enabled biomedical research\nTherapeutic discovery\nPrecision medicine\nTranslational computational biology\n\n\n\n\n\nI believe that the most impactful scientific advances emerge when complementary expertise converges around important questions.\nI value collaborations characterized by intellectual curiosity, methodological rigor, openness, and a shared commitment to reproducible and impactful research.\n\n\n\n\nIf my research interests align with yours, I would be delighted to connect.\nWhether you would like to discuss research ideas, potential collaborations, graduate opportunities, invited talks, open-source initiatives, or interdisciplinary projects, please feel free to reach out.\nI look forward to contributing to scientific discoveries that improve our understanding of biology and ultimately benefit human health."
+  },
+  {
+    "objectID": "contact.html#research-interests",
+    "href": "contact.html#research-interests",
+    "title": "Let’s Advance Biomedical Discovery Together",
+    "section": "",
+    "text": "I am particularly interested in collaborations involving:\n\nComputational Biology\nBioinformatics\nComputational Genomics\nArtificial Intelligence for Biomedicine\nMachine Learning\nStructural Bioinformatics\nComputational Drug Discovery\nPrecision Medicine\nCancer Biology\nInfectious Diseases\nMulti-omics Integration\nOpen Science"
+  },
+  {
+    "objectID": "contact.html#professional-profiles",
+    "href": "contact.html#professional-profiles",
+    "title": "Let’s Advance Biomedical Discovery Together",
+    "section": "",
+    "text": "Email\nanthonyimolele@gmail.com\nORCID\nGitHub\nLinkedIn\nResearchGate"
+  },
+  {
+    "objectID": "contact.html#current-interests",
+    "href": "contact.html#current-interests",
+    "title": "Let’s Advance Biomedical Discovery Together",
+    "section": "",
+    "text": "I am currently seeking opportunities to contribute to ambitious research environments where computational approaches can generate new biological insight and accelerate biomedical discovery.\nI am particularly interested in collaborations involving:\n\nComputational genomics\nAI-enabled biomedical research\nTherapeutic discovery\nPrecision medicine\nTranslational computational biology"
+  },
+  {
+    "objectID": "contact.html#a-philosophy-of-collaboration",
+    "href": "contact.html#a-philosophy-of-collaboration",
+    "title": "Let’s Advance Biomedical Discovery Together",
+    "section": "",
+    "text": "I believe that the most impactful scientific advances emerge when complementary expertise converges around important questions.\nI value collaborations characterized by intellectual curiosity, methodological rigor, openness, and a shared commitment to reproducible and impactful research."
+  },
+  {
+    "objectID": "contact.html#get-in-touch",
+    "href": "contact.html#get-in-touch",
+    "title": "Let’s Advance Biomedical Discovery Together",
+    "section": "",
+    "text": "If my research interests align with yours, I would be delighted to connect.\nWhether you would like to discuss research ideas, potential collaborations, graduate opportunities, invited talks, open-source initiatives, or interdisciplinary projects, please feel free to reach out.\nI look forward to contributing to scientific discoveries that improve our understanding of biology and ultimately benefit human health."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Godswill Imolele Anthony",
+    "section": "",
+    "text": "Every antibiotic is a conversation with four billion years of evolution. I build models that know the limits of what they know, so that when we act on that conversation, we act with open eyes.\nUnderstanding why predictive models fail across populations may reveal more about disease biology than understanding why they first succeed. I develop uncertainty-aware, interpretable computational methods that turn uneven, incomplete biological and surveillance data into evidence people can trust and act on.\nTeam lead of Argus AI, winner of the Global AMR R&D Hub Cross-Domain Award at the 2026 Vivli AMR Surveillance Data Challenge. Bioinformatics Associate at BioSeq; Project Lead at the Helix Biogen Institute, Nigeria. Applying for PhD positions in [FIELD] starting [YEAR].\n\nResearch Projects Publications Download CV"
+  },
+  {
+    "objectID": "index.html#three-things-you-can-open-right-now",
+    "href": "index.html#three-things-you-can-open-right-now",
+    "title": "Godswill Imolele Anthony",
+    "section": "Three things you can open right now",
+    "text": "Three things you can open right now\n\n\n\nArgus AI\nWhere do the biggest resistance threats and the weakest R&D response coincide? Bayesian evidence synthesis with built-in sensitivity analyses.\nLive dashboard · Official award entry\n\n\n\nResistAI+\nHow fast is resistance changing, how confident can we be, and when will thresholds be crossed? Change-points, MIC creep and forecasts with intervals.\nLive dashboard\n\n\n\nNaijaResist\nWhat happens when phenotype and genotype disagree? Machine-learning prediction for Nigeria that makes discordance visible and reviewable.\nLive dashboard\n\n\n\nThe dashboards run on free hosting, so one that has been idle may take around 30 seconds to wake. All projects →"
+  },
+  {
+    "objectID": "index.html#what-i-work-on",
+    "href": "index.html#what-i-work-on",
+    "title": "Godswill Imolele Anthony",
+    "section": "What I work on",
+    "text": "What I work on\nBayesian hierarchical modelling · AMR surveillance and forecasting · genotype–phenotype reconciliation · machine-learning drug discovery · pathogen and infection genomics · reproducible, auditable pipelines\nRead the research programme →"
+  },
+  {
+    "objectID": "index.html#recent",
+    "href": "index.html#recent",
+    "title": "Godswill Imolele Anthony",
+    "section": "Recent",
+    "text": "Recent\n\nOct 2026: Joined BioSeq LTD as Bioinformatics Associate (Level 3), working on infection genomics and AMR data integration.\n2026: Argus AI received the Global AMR R&D Hub Cross-Domain Award at the Vivli AMR Surveillance Data Challenge.\n2026: First-author paper on machine-learning discovery of InhA inhibitors published in Biology Methods and Protocols (DOI).\n2025: ResistAI+ named finalist (top 10% of 100+ teams) at the Vivli AMR Surveillance Global Data Challenge.\n2025: Winner, Advanced CADD Machine-Learning Drug Discovery Challenge.\n\n\n\nAbout · Experience · ORCID · anthonyimolele@gmail.com"
+  },
+  {
+    "objectID": "publications.html",
+    "href": "publications.html",
+    "title": "Publications",
+    "section": "",
+    "text": "Ten outputs since 2020 (nine journal articles and one preprint), including two first-author papers on machine-learning-guided drug discovery. My current work extends this toward uncertainty-aware AMR surveillance; see Projects.\nORCID 0000-0002-3093-3309 · Google Scholar · PubMed"
+  },
+  {
+    "objectID": "publications.html#discovery-of-novel-inha-inhibitors-by-structural-bioinformatics-and-machine-learning-qsar",
+    "href": "publications.html#discovery-of-novel-inha-inhibitors-by-structural-bioinformatics-and-machine-learning-qsar",
+    "title": "Publications",
+    "section": "Discovery of novel InhA inhibitors by structural bioinformatics and machine-learning QSAR",
+    "text": "Discovery of novel InhA inhibitors by structural bioinformatics and machine-learning QSAR\nFirst and corresponding author\nAnthony, G. I., et al. (2026). Discovery of novel InhA inhibitors through structural bioinformatics and machine learning-driven QSAR screening of natural products. Biology Methods and Protocols, 11(1), bpag015. doi:10.1093/biomethods/bpag015\nA machine-learning QSAR and structural-bioinformatics workflow for screening natural products against InhA, a validated tuberculosis target, integrating molecular descriptors, model evaluation, docking and molecular dynamics. Figure and details on the Projects page.\nMachine learning · QSAR · Molecular dynamics · Tuberculosis"
+  },
+  {
+    "objectID": "publications.html#molecular-ai-for-grk5-ligand-discovery",
+    "href": "publications.html#molecular-ai-for-grk5-ligand-discovery",
+    "title": "Publications",
+    "section": "Molecular AI for GRK5 ligand discovery",
+    "text": "Molecular AI for GRK5 ligand discovery\nFirst author\nAnthony, G. I., Ogbozor, F. I., Atanda, D. O., Bodun, D. S., Folaranmi, I. O., Eguavoen, A. E., Olaide, T. H., Nwachukwu, F. U., Ohilebo, A. A., Okotie, G. E., Adubi, P. O., & Ayangoke, O. A. (2025). In silico evaluation of 4-quinolone ligands interacting with human G protein-coupled receptor kinase 5 using message-passing neural networks, molecular docking and molecular dynamics simulation. Egyptian Journal of Medical Human Genetics. doi:10.1186/s43042-025-00780-x\nCombines graph-based deep learning with structure-based modelling to evaluate 4-quinolone compounds against GRK5.\nMessage-passing neural networks · Molecular docking · Molecular dynamics"
+  },
+  {
+    "objectID": "publications.html#machine-learning-and-structural-bioinformatics-for-chagas-disease",
+    "href": "publications.html#machine-learning-and-structural-bioinformatics-for-chagas-disease",
+    "title": "Publications",
+    "section": "Machine learning and structural bioinformatics for Chagas disease",
+    "text": "Machine learning and structural bioinformatics for Chagas disease\nContributing author\nOmoseeye, S. D., Azekhuoria, D. O., Owolade, A. J., Ibeh, S. J., Anthony, G. I., Adaramola, I. M., Adeniyi, A. A., Iwuji, C. B., Adedara, J. F., & Bodun, D. S. (2026). Integrative machine learning and structural bioinformatics strategies for the identification of selective sterol 14α-demethylase inhibitors targeting Trypanosoma cruzi. In Silico Research in Biomedicine, 2, 100182. doi:10.1016/j.insi.2026.100182\nNeglected tropical diseases · Machine learning · Structural bioinformatics"
+  },
+  {
+    "objectID": "publications.html#the-impact-of-antimicrobial-resistance-on-cancer-treatment",
+    "href": "publications.html#the-impact-of-antimicrobial-resistance-on-cancer-treatment",
+    "title": "Publications",
+    "section": "The impact of antimicrobial resistance on cancer treatment",
+    "text": "The impact of antimicrobial resistance on cancer treatment\nCo-author\nLawal, O. P., Ahmed, N. K., Ilesanmi, T. A., Anthony, G. I., Nwosu, S. N., Ogungbemiro, F. O., Olaide, Z., Adeniyi, M. M., Okoye, U. L., Folayan, A. M., Christopher, A. A., & Oseghale, I. D. (2024). The impact of antimicrobial resistance on cancer treatment: current evidence and future directions. Asian Journal of Research in Medical and Pharmaceutical Sciences, 13(4), 9–27. doi:10.9734/ajrimps/2024/v13i4270\nHow resistant infections complicate cancer treatment and why stewardship matters in immunocompromised patients.\nAntimicrobial resistance · Oncology · Stewardship"
+  },
+  {
+    "objectID": "publications.html#evidence-based-management-of-urinary-tract-infections",
+    "href": "publications.html#evidence-based-management-of-urinary-tract-infections",
+    "title": "Publications",
+    "section": "Evidence-based management of urinary tract infections",
+    "text": "Evidence-based management of urinary tract infections\nCo-author\nIbiyemi, F. O., Awoniran, D., Anthony, G. I., Odetayo, I. K., & Ayomide, L. F. (2025). Evidence-based management of urinary tract infections: balancing efficacy, safety and antimicrobial stewardship. International Journal of Research in Pharmacy and Allied Science, 4(10). doi:10.71431/IJRPAS.2025.41003\nUrinary tract infections · Stewardship · Clinical therapeutics"
+  },
+  {
+    "objectID": "publications.html#epitope-based-vaccine-candidate-for-lassa-mammarenavirus",
+    "href": "publications.html#epitope-based-vaccine-candidate-for-lassa-mammarenavirus",
+    "title": "Publications",
+    "section": "Epitope-based vaccine candidate for Lassa mammarenavirus",
+    "text": "Epitope-based vaccine candidate for Lassa mammarenavirus\nCo-author\nAbass, O. A., Timofeev, V. I., Sarkar, B., Onobun, D. O., Ogunsola, S. O., Aiyenuro, A. E., Aborode, A. T., Aigboje, A. E., Omobolanle, B. N., Imolele, A. G., & Abiodun, A. A. (2022). Immunoinformatics analysis to design a novel epitope-based vaccine candidate targeting the glycoprotein and nucleoprotein of Lassa mammarenavirus using strains from Nigeria. Journal of Biomolecular Structure and Dynamics, 40(16), 7283–7302. doi:10.1080/07391102.2021.1896387\nSelects conserved CTL, HTL and B-cell epitopes from Lassa glycoprotein and nucleoprotein sequences and validates the construct by docking, molecular dynamics and immune simulation.\nLassa fever · Immunoinformatics · Vaccine design"
+  },
+  {
+    "objectID": "publications.html#peptide-based-vaccine-design-for-malaria",
+    "href": "publications.html#peptide-based-vaccine-design-for-malaria",
+    "title": "Publications",
+    "section": "Peptide-based vaccine design for malaria",
+    "text": "Peptide-based vaccine design for malaria\nCo-author\nOgunniran, J. A., Oladipo, E. K., Anthony, G. I., Ademola, K. O., Alao, O. K., Ajayi, K. O., Ockiya, M. A., Taiwo, O. R., Samuel, N. N., & Christianah, O. A. (2024). Immunoinformatics design of a peptide-based vaccine for malaria infection. Eclética Química. Publication\nMalaria · Epitope prediction · Vaccine design"
+  },
+  {
+    "objectID": "publications.html#antipsychotic-medications-and-patient-safety",
+    "href": "publications.html#antipsychotic-medications-and-patient-safety",
+    "title": "Publications",
+    "section": "Antipsychotic medications and patient safety",
+    "text": "Antipsychotic medications and patient safety\nCo-author\nIbiyemi, F. O., Anthony, G. I., Rasheedat, S., Ayomide, L. F., & Adetayo, I. K. (2025). Antipsychotic medications and patient safety: a systematic analysis of adverse drug reactions across drug classes. International Journal of Research in Pharmacy and Allied Science, 4(10), 66–85.\nDrug safety · Pharmacovigilance · Evidence synthesis"
+  }
+]
